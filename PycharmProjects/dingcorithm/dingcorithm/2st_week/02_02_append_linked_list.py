@@ -16,10 +16,8 @@ class LinkedList:
 # LinkedList 의 가장 끝에 있는 노드에 새로운 노드를 연결해줘
   def append(self, value):
     cur = self.head
-
-    while cur.next != None:
+    while cur.next is not None:
       cur = cur.next
-
     cur.next = Node(value)
 
 # linked_list 에서 저장한 head를 따라가면서 현재 있는 노드들을 전부 출력해주는 함수.

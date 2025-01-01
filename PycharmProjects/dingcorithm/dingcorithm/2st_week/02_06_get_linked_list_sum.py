@@ -16,12 +16,12 @@ class LinkedList:
 
 def get_single_linked_list_sum(linked_list):
   sum = 0
-  cur = linked_list_1.head
+  cur = linked_list.head
   while cur is not None:
     sum = sum * 10 + cur.data
     cur = cur.next
-  return sum
 
+  return sum
 
 def get_linked_list_sum(linked_list_1, linked_list_2):
   sum_1 = get_single_linked_list_sum(linked_list_1)

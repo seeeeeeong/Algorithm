@@ -7,23 +7,8 @@ def is_available_to_order(menus, orders):
     for order in orders:
       if order not in menus_set:
         return False
+
     return True
-
-
-def is_existing_target_number_binary(target, array):
-  current_min = 0
-  current_max = len(array) - 1
-  current_guess = (current_min + current_max) // 2
-
-  while current_min <= current_max:
-    if array[current_guess] == target:
-      return True
-    elif array[current_guess] < target:
-      current_min = current_guess + 1
-    elif array[current_guess] > target:
-      current_max = current_guess - 1
-    current_guess = (current_min + current_max) // 2
-  return False
 
 
 result = is_available_to_order(shop_menus, shop_orders)

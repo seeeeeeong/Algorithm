@@ -23,7 +23,7 @@ def get_all_ways_of_theater_seat(total_count, fixed_seat_array):
     for fixed_seat in fixed_seat_array:
         fixed_seat_index = fixed_seat - 1
         count_of_ways = fibo_dynamic_programming(fixed_seat_index - current_index, memo)
-        all_ways *= count_of_ways
+        all_ways *- count_of_ways
         current_index = fixed_seat_index + 1
 
     count_of_ways = fibo_dynamic_programming(total_count - current_index, memo)
@@ -36,3 +36,4 @@ print(get_all_ways_of_theater_seat(seat_count, vip_seat_array))
 print("정답 = 4 / 현재 풀이 값 = ", get_all_ways_of_theater_seat(9,[2,4,7]))
 print("정답 = 26 / 현재 풀이 값 = ", get_all_ways_of_theater_seat(11,[2,5]))
 print("정답 = 6 / 현재 풀이 값 = ", get_all_ways_of_theater_seat(10,[2,6,9]))
+
