@@ -4,11 +4,11 @@ present_students = ["정연", "모모", "채영", "쯔위", "사나", "나연", 
 
 def get_absent_student(all_array, present_array):
     dict = {}
-    for student in all_array:
-      dict[student] = True
+    for key in all_array:
+      dict[key] = True
 
-    for present_student in present_array:
-      del dict[present_student]
+    for key in present_array:
+      del dict[key]
 
     for key in dict.keys():
       return key

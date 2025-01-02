@@ -12,42 +12,21 @@ class Stack:
     new_head = Node(value)
     new_head.next = self.head
     self.head = new_head
-    return
+
 
   # pop 기능 구현
   def pop(self):
     if self.is_empty():
-      print("stack is Empty")
-
+      return "Stack is empty!"
     delete_head = self.head
     self.head = self.head.next
     return delete_head
 
   def peek(self):
     if self.is_empty():
-      return "stack is Empty"
-
+      return "Stack is empty!"
     return self.head.data
 
   # isEmpty 기능 구현
   def is_empty(self):
     return self.head is None
-
-stack = Stack()
-stack.push(4)
-print(stack.peek())
-
-stack.push(3)
-print(stack.peek())
-
-stack.push(5)
-print(stack.peek())
-
-stack.pop()
-print(stack.peek())
-
-stack.pop()
-print(stack.peek())
-
-stack.pop()
-print(stack.peek())

@@ -1,19 +1,22 @@
+from collections import deque
+
 prices = [1, 2, 3, 2, 3]
 
 
-
 def get_price_not_fall_periods(prices):
-  result = [0] * len(prices)
+  result = []
+  prices = deque(prices)
 
-  for i in range(0, len(prices) - 1, 1):
+  while prices:
     price_not_fall_period = 0
-    for j in range(i + 1, len(prices), 1):
-      if prices[i] <= prices[j]:
-        price_not_fall_period += 1
-      else:
+    current_price = prices.popleft()
+    for next_price in prices:
+      if current_price > next_price:
         price_not_fall_period += 1
         break
-    result[i] = price_not_fall_period
+      price_not_fall_period += 1
+
+    result.append(price_not_fall_period)
 
   return result
 

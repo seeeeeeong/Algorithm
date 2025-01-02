@@ -19,7 +19,6 @@ class LinkedDict:
 
   def put(self, key, value):
     index = hash(key) % len(self.items)
-
     self.items[index].add(key, value)
 
   def get(self, key):

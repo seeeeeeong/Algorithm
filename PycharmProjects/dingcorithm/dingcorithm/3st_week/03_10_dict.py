@@ -10,6 +10,7 @@ class Dict:
     index = hash(key) % len(self.items)
     return self.items[index]
 
+
 my_dict = Dict()
 my_dict.put("test", 3)
-print(my_dict.get("test"))
+print(my_dict.get("test"))  # 3이 반환되어야 합니다!
