@@ -1,6 +1,6 @@
 def is_number_exist(number, array):
   for element in array:
-    if number == element:
+    if element == number:
       return True
   return False
 
