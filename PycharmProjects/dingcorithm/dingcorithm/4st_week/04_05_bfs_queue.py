@@ -1,5 +1,3 @@
-from collections import deque
-
 # 위의 그래프를 예시로 삼아서 인접 리스트 방식으로 표현했습니다!
 graph = {
     1: [2, 3, 4],
@@ -16,17 +14,17 @@ graph = {
 
 
 def bfs_queue(adj_graph, start_node):
-  queue = [start_node]
-  visited = []
+    queue = [start_node]
+    visited = []
 
-  while queue:
-    current_node = queue.pop(0)
-    visited.append(current_node)
-    for adjacent_node in adj_graph[current_node]:
-      if adjacent_node not in visited:
-        queue.append(adjacent_node)
+    while queue:
+      current_node = queue.pop(0)
+      visited.append(current_node)
+      for adjacent_node in adj_graph[current_node]:
+        if adjacent_node not in visited:
+          queue.append(adjacent_node)
 
-  return visited
+    return visited
 
 
 print(bfs_queue(graph, 1))  # 1 이 시작노드입니다!
