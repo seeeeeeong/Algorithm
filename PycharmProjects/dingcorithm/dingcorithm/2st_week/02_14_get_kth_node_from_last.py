@@ -33,7 +33,3 @@ linked_list.append(7)
 linked_list.append(8)
 
 print(linked_list.get_kth_node_from_last(2).data)  # 7이 나와야 합니다!
-
-
-
-

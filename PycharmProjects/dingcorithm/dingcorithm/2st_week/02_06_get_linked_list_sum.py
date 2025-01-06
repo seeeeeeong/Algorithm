@@ -18,7 +18,7 @@ def get_single_linked_list_sum(linked_list):
   sum = 0
   cur = linked_list.head
   while cur is not None:
-    sum = sum * 10 + cur.data
+    sum = sum * 10 +cur.data
     cur = cur.next
 
   return sum
