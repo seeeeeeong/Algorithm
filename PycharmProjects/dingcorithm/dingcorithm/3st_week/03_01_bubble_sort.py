@@ -11,6 +11,10 @@ def bubble_sort(array):
     return array
 
 
+# 4번 비교 -> 가장 큰 값이 맨 뒤
+# 3번 비교 -> 가장 큰 값이 맨 뒤 ....
+
+
 bubble_sort(input)
 print(input)  # [1, 2, 4, 6, 9] 가 되어야 합니다!
 

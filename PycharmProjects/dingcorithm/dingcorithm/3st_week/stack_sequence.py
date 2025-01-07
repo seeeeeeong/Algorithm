@@ -1,4 +1,5 @@
 def stack_sequence(n, sequence):
+
   stack = []
   num = 1
   sequence_idx = 0
@@ -25,15 +26,14 @@ def stack_sequence(n, sequence):
       result.append("+")
       num += 1
 
-  if len(stack) == 0:
-    for char in result:
-      print(char)
-
+    if len(stack) == 0:
+      for char in result:
+        print(char)
 
 sequence = list()
-
 n = int(input())
 for _ in range(n):
-  sequence.append(int(input()))
-
+    sequence.append(int(input()))
 stack_sequence(n, sequence)
+
+
