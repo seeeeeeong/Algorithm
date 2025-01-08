@@ -20,7 +20,7 @@ class MaxHeap:
     prev_max = self.items.pop()
     cur_index = 1
 
-    while cur_index <= len(self.items) - 1:
+    while cur_index > 1:
       left_child_index = cur_index * 2
       right_child_index = cur_index * 2 + 1
       max_index = cur_index
