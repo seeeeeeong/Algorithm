@@ -27,7 +27,6 @@ class LinkedList:
 
     return slow
 
-
 linked_list = LinkedList(6)
 linked_list.append(7)
 linked_list.append(8)

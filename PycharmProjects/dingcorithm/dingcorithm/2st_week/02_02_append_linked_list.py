@@ -20,7 +20,6 @@ class LinkedList:
       print(cur.data)
       cur = cur.next
 
-
 linked_list = LinkedList(5)
 linked_list.append(12)
 linked_list.print_all()

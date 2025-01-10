@@ -33,17 +33,16 @@ class LinkedList:
     if index == 0:
       new_node.next = self.head
       self.head = new_node
-      return
 
     prev_node = self.get_node(index - 1)
     next_node = prev_node.next
     prev_node.next = new_node
     new_node.next = next_node
 
-    return "index 번째 Node 뒤에 value 를 추가하세요!"
 
 
 linked_list = LinkedList(5)
 linked_list.append(12)
 linked_list.add_node(0, 3)
 linked_list.print_all()
+

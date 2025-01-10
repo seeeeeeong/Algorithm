@@ -14,7 +14,6 @@ def is_existing_target_number_binary(target, array):
         current_min = current_guess + 1
       else:
         current_max = current_guess - 1
-
       current_guess = (current_min + current_max) // 2
 
     return False

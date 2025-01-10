@@ -44,7 +44,7 @@ class LinkedList:
     if index == 0:
       self.head = self.head.next
       return
-    node = self.get_node(index -1)
+    node = self.get_node(index - 1)
     node.next = node.next.next
 
 linked_list = LinkedList(5)
