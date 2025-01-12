@@ -3,8 +3,8 @@ user_coupons = [20, 40]
 
 
 def get_max_discounted_price(prices, coupons):
-    prices.sort(reverse=True)
     coupons.sort(reverse=True)
+    prices.sort(reverse=True)
     price_index = 0
     coupon_index = 0
     max_discounted_price = 0

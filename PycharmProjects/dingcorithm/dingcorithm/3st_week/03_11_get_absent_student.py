@@ -4,13 +4,14 @@ present_students = ["정연", "모모", "채영", "쯔위", "사나", "나연", 
 
 def get_absent_student(all_array, present_array):
     dict = {}
-    for key in all_array:
-        dict[key] = True  # 아무 값이나 넣어도 상관 없습니다! 여기서는 키가 중요한거니까요
 
-    for key in present_array:  # dict에서 key 를 하나씩 없앱니다
+    for key in all_array:
+        dict[key] = True
+
+    for key in present_array:
         del dict[key]
 
-    for key in dict.keys():  # key 중에 하나를 바로 반환합니다! 한 명 밖에 없으니 이렇게 해도 괜찮습니다.
+    for key in dict.keys():
         return key
 
 

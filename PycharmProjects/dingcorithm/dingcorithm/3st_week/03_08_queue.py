@@ -11,7 +11,7 @@ class Queue:
 
   def enqueue(self, value):
     new_node = Node(value)
-    while self.is_empty():
+    if self.is_empty():
       self.head = new_node
       self.tail = new_node
       return
@@ -26,11 +26,12 @@ class Queue:
     delete_head = self.head
     self.head = self.head.next
 
-    return self.head.data
+    return delete_head.data
 
   def peek(self):
     if self.is_empty():
       return "Queue is empty"
+
     return self.head.data
 
   def is_empty(self):

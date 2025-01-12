@@ -9,7 +9,6 @@ def merge_sort(array):
     right_array = array[mid:]
     return merge(merge_sort(left_array), merge_sort(right_array))
 
-
 def merge(array1, array2):
     result = []
     array1_index = 0

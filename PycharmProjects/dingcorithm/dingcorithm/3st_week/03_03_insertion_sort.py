@@ -6,10 +6,9 @@ def insertion_sort(array):
     for i in range(1, n):
       for j in range(i):
         if array[i - j - 1] > array[i - j]:
-          array[i - j - 1], array[i - j] = array[i - j], array[i - j - 1]
+          array[i - j - 1], array[i - j] = array[i - j], array[i - j -1]
         else:
           break
-
     return array
 
 insertion_sort(input)
