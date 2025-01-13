@@ -13,7 +13,6 @@ def fibo_dynamic_programming(n, fibo_memo):
 
     nth_fibo = fibo_dynamic_programming(n - 1, fibo_memo) + fibo_dynamic_programming(n - 2, fibo_memo)
     fibo_memo[n] = nth_fibo
-
     return nth_fibo
 
 

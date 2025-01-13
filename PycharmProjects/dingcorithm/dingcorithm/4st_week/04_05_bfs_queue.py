@@ -1,3 +1,5 @@
+from collections import deque
+
 # 위의 그래프를 예시로 삼아서 인접 리스트 방식으로 표현했습니다!
 graph = {
     1: [2, 3, 4],
