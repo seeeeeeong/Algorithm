@@ -20,7 +20,6 @@ def get_single_linked_list_sum(linked_list):
   while cur is not None:
     sum = sum * 10 + cur.data
     cur = cur.next
-
   return sum
 
 def get_linked_list_sum(linked_list_1, linked_list_2):

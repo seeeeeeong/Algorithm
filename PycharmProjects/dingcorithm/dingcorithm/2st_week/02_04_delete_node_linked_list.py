@@ -47,6 +47,7 @@ class LinkedList:
     node = self.get_node(index - 1)
     node.next = node.next.next
 
+
 linked_list = LinkedList(5)
 linked_list.append(12)
 linked_list.add_node(0, 3)

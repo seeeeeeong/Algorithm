@@ -16,12 +16,6 @@ def find_prime_list_under_number(number):
 result = find_prime_list_under_number(input)
 print(result)
 
-
-# 20 이하의 소수를 모두 반환
-
-# for i in range(2, number + 1)
-#   for j in range(j, int(j ** 0.5) + 1)
-#       if i % j == 0:
-#           break
-#   answer.append(i)
-# return answer
+# 20 이하의 소수
+# for i in range number + 1
+#   for j in range(i, int(i**0.5) + 1)
