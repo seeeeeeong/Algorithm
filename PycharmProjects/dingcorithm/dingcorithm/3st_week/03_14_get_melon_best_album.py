@@ -22,15 +22,17 @@ def get_melon_best_album(genre_array, play_array):
 
     result = []
     for genre, total_play in sorted_genre_play_array:
-      sorted_genre_index = sorted(genre_index_play_array_dict[genre], key=lambda item: item[1], reverse=True)
+      sorted_genre_index_play_array = sorted(genre_index_play_array_dict[genre], key=lambda item: item[1], reverse=True)
 
       genre_song_count = 0
-      for index, play in sorted_genre_index:
+      for index, play in sorted_genre_index_play_array:
         if genre_song_count >= 2:
           break
 
         result.append(index)
         genre_song_count += 1
+
+    return result
 
 
 print("정답 = [4, 1, 3, 0] / 현재 풀이 값 = ", get_melon_best_album(["classic", "pop", "classic", "classic", "pop"], [500, 600, 150, 800, 2500]))

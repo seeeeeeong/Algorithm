@@ -20,8 +20,6 @@ def get_price_not_fall_periods(prices):
 
   return result
 
-
-
 print(get_price_not_fall_periods(prices))
 
 print("정답 = [4, 3, 1, 1, 0] / 현재 풀이 값 = ", get_price_not_fall_periods(prices))

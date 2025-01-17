@@ -13,7 +13,7 @@ def stack_sequence(n, sequence):
         elif sequence[sequence_idx] == stack[-1]:
             stack.pop()
             result.append("-")
-            num += 1
+            sequence_idx += 1
             if sequence_idx == n:
                 break
 
@@ -28,9 +28,6 @@ def stack_sequence(n, sequence):
     if len(stack) == 0:
         for char in result:
             print(char)
-
-
-
 
 
 sequence = list()
