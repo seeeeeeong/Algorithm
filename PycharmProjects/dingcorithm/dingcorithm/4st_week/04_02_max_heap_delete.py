@@ -25,7 +25,7 @@ class MaxHeap:
       right_child_index = cur_index * 2 + 1
       max_index = cur_index
 
-      if left_child_index <= len(self.items) -1 and self.items[left_child_index] > self.items[max_index]:
+      if left_child_index <= len(self.items) - 1 and self.items[left_child_index] > self.items[max_index]:
         max_index = left_child_index
 
       if right_child_index <= len(self.items) - 1 and self.items[right_child_index] > self.items[max_index]:
@@ -34,8 +34,8 @@ class MaxHeap:
       if max_index == cur_index:
         break
 
-      self.items[cur_index], self.items[max_index] = self.items[max_index], self.items[cur_index]
-      cur_index = max_index
+    self.items[cur_index], self.items[max_index] = self.items[max_index], self.items[cur_index]
+    cur_index = max_index
 
     return prev_max
 

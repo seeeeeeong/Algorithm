@@ -6,6 +6,7 @@ memo = {
     2: 2
 }
 
+
 def fibo_dynamic_programming(n, fibo_memo):
     if n in fibo_memo:
         return fibo_memo[n]
@@ -13,7 +14,6 @@ def fibo_dynamic_programming(n, fibo_memo):
     nth_fibo = fibo_dynamic_programming(n - 1, fibo_memo) + fibo_dynamic_programming(n - 2, fibo_memo)
     fibo_memo[n] = nth_fibo
     return nth_fibo
-
 
 def get_all_ways_of_theater_seat(total_count, fixed_seat_array):
     all_ways = 1
@@ -28,8 +28,5 @@ def get_all_ways_of_theater_seat(total_count, fixed_seat_array):
     all_ways *= count_of_ways
     return all_ways
 
-
 # 12가 출력되어야 합니다!
 print(get_all_ways_of_theater_seat(seat_count, vip_seat_array))
-
-#

@@ -13,9 +13,7 @@ class MaxHeap:
         cur_index = parent_index
       else:
         break
-
     return
-
 
 
 max_heap = MaxHeap()

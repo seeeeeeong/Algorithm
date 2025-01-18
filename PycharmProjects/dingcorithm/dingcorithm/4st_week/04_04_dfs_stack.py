@@ -16,6 +16,7 @@ graph = {
 def dfs_stack(adjacent_graph, start_node):
     stack = [start_node]
     visited = []
+
     while stack:
       current_node = stack.pop()
       visited.append(current_node)
