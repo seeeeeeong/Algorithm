@@ -7,28 +7,27 @@ def stack_sequence(n, sequence):
     while True:
         if len(stack) == 0:
             stack.append(num)
-            result.append("+")
+            result.append('+')
             num += 1
 
         elif sequence[sequence_idx] == stack[-1]:
             stack.pop()
-            result.append("-")
+            result.append('-')
             sequence_idx += 1
             if sequence_idx == n:
                 break
 
         else:
             if n < num:
-                print("NO")
+                print('NO')
                 break
             stack.append(num)
-            result.append("+")
+            result.append('+')
             num += 1
 
     if len(stack) == 0:
         for char in result:
             print(char)
-
 
 sequence = list()
 n = int(input())

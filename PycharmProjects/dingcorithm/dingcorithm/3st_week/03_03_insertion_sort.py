@@ -9,8 +9,8 @@ def insertion_sort(array):
           array[i - j - 1], array[i - j] = array[i - j], array[i - j - 1]
         else:
           break
-    return array
 
+    return array
 
 insertion_sort(input)
 print(input) # [1, 2, 4, 6, 9] 가 되어야 합니다!
