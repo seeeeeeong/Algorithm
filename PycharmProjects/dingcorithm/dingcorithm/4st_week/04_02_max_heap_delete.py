@@ -34,8 +34,8 @@ class MaxHeap:
       if max_index == cur_index:
         break
 
-    self.items[cur_index], self.items[max_index] = self.items[max_index], self.items[cur_index]
-    cur_index = max_index
+      self.items[cur_index], self.items[max_index] = self.items[max_index], self.items[cur_index]
+      cur_index = max_index
 
     return prev_max
 
