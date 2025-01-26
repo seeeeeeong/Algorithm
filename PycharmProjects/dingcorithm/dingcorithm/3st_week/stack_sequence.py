@@ -1,7 +1,7 @@
 def stack_sequence(n, sequence):
     stack = []
     num = 1
-    sequence_idx = 0
+    sequence_index = 0
     result = []
 
     while True:
@@ -10,11 +10,11 @@ def stack_sequence(n, sequence):
             result.append('+')
             num += 1
 
-        elif sequence[sequence_idx] == stack[-1]:
+        elif sequence[sequence_index] == stack[-1]:
             stack.pop()
             result.append('-')
-            sequence_idx += 1
-            if sequence_idx == n:
+            sequence_index += 1
+            if sequence_index == n:
                 break
 
         else:
@@ -28,6 +28,7 @@ def stack_sequence(n, sequence):
     if len(stack) == 0:
         for char in result:
             print(char)
+
 
 sequence = list()
 n = int(input())
