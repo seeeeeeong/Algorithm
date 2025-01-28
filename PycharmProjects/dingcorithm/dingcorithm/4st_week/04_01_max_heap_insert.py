@@ -9,10 +9,12 @@ class MaxHeap:
     while cur_index > 1:
       parent_index = cur_index // 2
       if self.items[parent_index] < self.items[cur_index]:
-        self.items[parent_index], self.items[cur_index] = self.items[cur_index], self.items[parent_index]
+        self.items[cur_index], self.items[parent_index] = self.items[parent_index], self.items[cur_index]
         cur_index = parent_index
       else:
         break
+
+    return
 
 
 max_heap = MaxHeap()
