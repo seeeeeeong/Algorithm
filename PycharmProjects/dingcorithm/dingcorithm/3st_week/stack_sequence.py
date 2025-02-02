@@ -1,28 +1,28 @@
 def stack_sequence(n, sequence):
     stack = []
     num = 1
-    sequence_index = 0
+    sequence_idx = 0
     result = []
 
     while True:
         if len(stack) == 0:
             stack.append(num)
-            result.append('+')
+            result.append("+")
             num += 1
 
-        elif sequence[sequence_index] == stack[-1]:
+        elif sequence_idx[sequence_idx] == stack[-1]:
             stack.pop()
-            result.append('-')
-            sequence_index += 1
-            if sequence_index == n:
+            result.append("-")
+            sequence_idx += 1
+            if sequence_idx == n:
                 break
 
         else:
             if n < num:
-                print('NO')
+                print("NO")
                 break
             stack.append(num)
-            result.append('+')
+            result.append("+")
             num += 1
 
     if len(stack) == 0:
