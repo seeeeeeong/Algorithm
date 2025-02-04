@@ -40,7 +40,6 @@ class MaxHeap:
     return prev_max
 
 
-
 max_heap = MaxHeap()
 max_heap.insert(8)
 max_heap.insert(6)
