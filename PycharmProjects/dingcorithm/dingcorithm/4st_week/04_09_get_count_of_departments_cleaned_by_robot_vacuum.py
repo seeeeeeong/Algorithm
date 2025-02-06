@@ -25,16 +25,18 @@ dc = [0, 1, 0, -1]
 def get_d_index_when_rotate_to_left(d):
     return (d + 3) % 4
 
+
 # 후진
 def get_d_index_when_go_back(d):
     return (d + 2) % 4
 
+
 def get_count_of_departments_cleaned_by_robot_vacuum(r, c, d, room_map):
     n = len(room_map)
     m = len(room_map[0])
-    count_of_departments_cleaned = 1
     room_map[r][c] = 2
     queue = deque([[r, c, d]])
+    count = 1
 
     while queue:
         r, c, d = queue.popleft()
@@ -45,17 +47,18 @@ def get_count_of_departments_cleaned_by_robot_vacuum(r, c, d, room_map):
             new_r, new_c = r + dr[temp_d], c + dc[temp_d]
 
             if 0 <= new_r < n and 0 <= new_c < m and room_map[new_r][new_c] == 0:
-                count_of_departments_cleaned += 1
                 room_map[new_r][new_c] = 2
                 queue.append([new_r, new_c, temp_d])
+                count += 1
                 break
 
             elif i == 3:
                 new_r, new_c = r + dr[get_d_index_when_go_back(d)], c + dc[get_d_index_when_go_back(d)]
-                queue.append([new_r, new_c])
+                queue.append([new_r, new_c, d])
 
                 if room_map[new_r][new_c] == 1:
-                    return count_of_departments_cleaned
+                    return count
+
 
 # 57 가 출력되어야 합니다!
 print(get_count_of_departments_cleaned_by_robot_vacuum(current_r, current_c, current_d, current_room_map))

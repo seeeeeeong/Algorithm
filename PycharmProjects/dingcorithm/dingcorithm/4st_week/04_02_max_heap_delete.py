@@ -20,15 +20,15 @@ class MaxHeap:
     prev_max = self.items.pop()
     cur_index = 1
 
-    while cur_index <= len(self.items) - 1:
+    while cur_index < len(self.items):
       left_child_index = cur_index * 2
-      right_child_index = cur_index * 2 + 1
+      right_child_index =cur_index * 2 + 1
       max_index = cur_index
 
-      if left_child_index <= len(self.items) - 1 and self.items[left_child_index] > self.items[max_index]:
+      if left_child_index < len(self.items) and self.items[left_child_index] > self.items[max_index]:
         max_index = left_child_index
 
-      if right_child_index <= len(self.items) - 1 and self.items[right_child_index] > self.items[max_index]:
+      if right_child_index < len(self.items) and self.items[right_child_index] > self.items[max_index]:
         max_index = right_child_index
 
       if max_index == cur_index:
@@ -38,7 +38,6 @@ class MaxHeap:
       cur_index = max_index
 
     return prev_max
-
 
 max_heap = MaxHeap()
 max_heap.insert(8)
@@ -50,3 +49,7 @@ max_heap.insert(4)
 print(max_heap.items)  # [None, 8, 6, 7, 2, 5, 4]
 print(max_heap.delete())  # 8 을 반환해야 합니다!
 print(max_heap.items)  # [None, 7, 6, 4, 2, 5]
+
+
+
+
