@@ -35,21 +35,20 @@ def get_count_of_departments_cleaned_by_robot_vacuum(r, c, d, room_map):
     n = len(room_map)
     m = len(room_map[0])
     room_map[r][c] = 2
+    result = 1
     queue = deque([[r, c, d]])
-    count = 1
 
     while queue:
         r, c, d = queue.popleft()
         temp_d = d
-
         for i in range(4):
             temp_d = get_d_index_when_rotate_to_left(temp_d)
             new_r, new_c = r + dr[temp_d], c + dc[temp_d]
 
             if 0 <= new_r < n and 0 <= new_c < m and room_map[new_r][new_c] == 0:
                 room_map[new_r][new_c] = 2
+                result += 1
                 queue.append([new_r, new_c, temp_d])
-                count += 1
                 break
 
             elif i == 3:
@@ -57,7 +56,9 @@ def get_count_of_departments_cleaned_by_robot_vacuum(r, c, d, room_map):
                 queue.append([new_r, new_c, d])
 
                 if room_map[new_r][new_c] == 1:
-                    return count
+                    return result
+
+
 
 
 # 57 가 출력되어야 합니다!

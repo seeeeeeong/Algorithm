@@ -22,7 +22,7 @@ class MaxHeap:
 
     while cur_index < len(self.items):
       left_child_index = cur_index * 2
-      right_child_index =cur_index * 2 + 1
+      right_child_index = cur_index * 2 + 1
       max_index = cur_index
 
       if left_child_index < len(self.items) and self.items[left_child_index] > self.items[max_index]:
@@ -39,6 +39,7 @@ class MaxHeap:
 
     return prev_max
 
+
 max_heap = MaxHeap()
 max_heap.insert(8)
 max_heap.insert(6)
@@ -49,7 +50,3 @@ max_heap.insert(4)
 print(max_heap.items)  # [None, 8, 6, 7, 2, 5, 4]
 print(max_heap.delete())  # 8 을 반환해야 합니다!
 print(max_heap.items)  # [None, 7, 6, 4, 2, 5]
-
-
-
-
